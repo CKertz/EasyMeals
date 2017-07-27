@@ -10,11 +10,24 @@ import UIKit
 
 class SecondViewController: UIViewController {
    
+    let easyMealsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "EasyMeals"
+        label.font=UIFont.init(name: "Futura Medium Bold", size: 50)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = UIColor.black
+        return label
+    }()
     let continueAsGuestLabel: UILabel = {
         let label = UILabel()
         label.text = "Continue as guest"
         label.font=UIFont.init(name: "Futura Medium", size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.attributedText = NSAttributedString(string: "Continue as guest", attributes:
+            [NSUnderlineStyleAttributeName:NSUnderlineStyle.styleSingle.rawValue])
+        label.textColor = UIColor.purple
         return label
     }()
     let signInButton: UIButton = {
@@ -54,6 +67,7 @@ class SecondViewController: UIViewController {
         view.addSubview(registerButton)
         view.addSubview(signInButton)
         view.addSubview(continueAsGuestLabel)
+        view.addSubview(easyMealsLabel)
         
         //setupLoginContainer()
         setupRegisterButton()
@@ -67,7 +81,7 @@ class SecondViewController: UIViewController {
     }
     func setupRegisterButton(){
         registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        registerButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        registerButton.topAnchor.constraint(equalTo: easyMealsLabel.bottomAnchor).isActive = true
         registerButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
         registerButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
@@ -76,10 +90,14 @@ class SecondViewController: UIViewController {
         signInButton.widthAnchor.constraint(equalTo: registerButton.widthAnchor).isActive = true
         signInButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        //continueAsGuestLabel.center = CGPoint(x: <#T##CGFloat#>, y: <#T##CGFloat#>)
-        //continueAsGuestLabel.leftAnchor.constraint(equalTo: registerButton.leftAnchor).isActive = true
-        continueAsGuestLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        //continueAsGuestLabel.centerXAnchor.constraint(equalTo: registerButton.centerXAnchor).isActive = true
+        easyMealsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        easyMealsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        easyMealsLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
+        easyMealsLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        
+                //continueAsGuestLabel.leftAnchor.constraint(equalTo: registerButton.leftAnchor).isActive = true
+        continueAsGuestLabel.leftAnchor.constraint(equalTo: registerButton.leftAnchor).isActive = true
         continueAsGuestLabel.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 10).isActive = true
         continueAsGuestLabel.widthAnchor.constraint(equalTo: registerButton.widthAnchor).isActive = true
         continueAsGuestLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
