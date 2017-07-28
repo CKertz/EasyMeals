@@ -9,11 +9,19 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-   
+    
+    let bgImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "blurGroceryStoreImg")
+        image.contentMode = .scaleAspectFill
+        return image
+    }()
     let easyMealsLabel: UILabel = {
         let label = UILabel()
         label.text = "EasyMeals"
-        label.font=UIFont.init(name: "Futura Medium Bold", size: 50)
+        label.font = label.font.withSize(50)
+        label.font = UIFont(name: "Futura", size: 48)
+        label.font = UIFont.boldSystemFont(ofSize: 48)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = UIColor.black
@@ -22,12 +30,12 @@ class SecondViewController: UIViewController {
     let continueAsGuestLabel: UILabel = {
         let label = UILabel()
         label.text = "Continue as guest"
-        label.font=UIFont.init(name: "Futura Medium", size: 16)
+        label.font=UIFont.init(name: "Futura", size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.attributedText = NSAttributedString(string: "Continue as guest", attributes:
             [NSUnderlineStyleAttributeName:NSUnderlineStyle.styleSingle.rawValue])
-        label.textColor = UIColor.purple
+        label.textColor = UIColor.blue
         return label
     }()
     let signInButton: UIButton = {
@@ -36,7 +44,7 @@ class SecondViewController: UIViewController {
         button.setTitle("Sign In", for: .normal)
         button.layer.cornerRadius = 6
         button.layer.masksToBounds = true
-        button.titleLabel?.font = UIFont.init(name: "Futura Medium", size: 16)
+        button.titleLabel?.font = UIFont.init(name: "Futura", size: 25)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
         
@@ -47,8 +55,9 @@ class SecondViewController: UIViewController {
         button.setTitle("Register", for: .normal)
         button.layer.cornerRadius = 6
         button.layer.masksToBounds = true
-        button.titleLabel?.font = UIFont.init(name: "Futura Medium" , size: 16)
+        button.titleLabel?.font = UIFont.init(name: "Futura" , size: 25)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
     let loginContainerView: UIView = {
@@ -62,15 +71,20 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
+        let bgImg = UIImageView(frame: UIScreen.main.bounds)
+        bgImg.image = UIImage(named: "blurGroceryStoreImg")
+        bgImg.contentMode = .scaleAspectFill
+        self.view.insertSubview(bgImg, at: 0)
 
         view.addSubview(loginContainerView)
         view.addSubview(registerButton)
         view.addSubview(signInButton)
         view.addSubview(continueAsGuestLabel)
         view.addSubview(easyMealsLabel)
+        //view.addSubview(bgImage)
         
         //setupLoginContainer()
-        setupRegisterButton()
+        setUpUI()
 
     }
     func setupLoginContainer(){
@@ -79,9 +93,9 @@ class SecondViewController: UIViewController {
         loginContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
         loginContainerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
-    func setupRegisterButton(){
+    func setUpUI(){
         registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        registerButton.topAnchor.constraint(equalTo: easyMealsLabel.bottomAnchor).isActive = true
+        registerButton.topAnchor.constraint(equalTo: easyMealsLabel.bottomAnchor, constant: 10).isActive = true
         registerButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
         registerButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
@@ -102,6 +116,16 @@ class SecondViewController: UIViewController {
         continueAsGuestLabel.widthAnchor.constraint(equalTo: registerButton.widthAnchor).isActive = true
         continueAsGuestLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        /*bgImage.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        bgImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        bgImage.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        bgImage.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        */
+        
+    }
+    func handleRegister(){
+        let loginController = RegisterController()
+        present(loginController, animated: true, completion: nil)
     }
 
 }
