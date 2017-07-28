@@ -46,6 +46,8 @@ class SecondViewController: UIViewController {
         button.layer.masksToBounds = true
         button.titleLabel?.font = UIFont.init(name: "Futura", size: 25)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+
         return button
         
     }()
@@ -125,6 +127,10 @@ class SecondViewController: UIViewController {
     }
     func handleRegister(){
         let loginController = RegisterController()
+        present(loginController, animated: true, completion: nil)
+    }
+    func handleSignIn(){
+        let loginController = SignInController()
         present(loginController, animated: true, completion: nil)
     }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterController: UIViewController{
+class SignInController: UIViewController{
     
     let passSeparator: UIView = {
         let view = UIView()
@@ -34,7 +34,7 @@ class RegisterController: UIViewController{
     let registerBtn: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor.red
-        button.setTitle("Register Now", for: .normal)
+        button.setTitle("Sign In", for: .normal)
         button.layer.cornerRadius = 6
         button.layer.masksToBounds = true
         button.titleLabel?.font = UIFont.init(name: "Futura", size: 25)
@@ -61,12 +61,12 @@ class RegisterController: UIViewController{
         image.image = UIImage(named: "whiteBG")
         image.contentMode = .scaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
-
+        
         return image
     }()
     let registerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Registration"
+        label.text = "Sign In"
         label.font=UIFont.init(name: "Futura", size: 48)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -115,13 +115,13 @@ class RegisterController: UIViewController{
     
     func setUpRegistrationUI(){
         
-
+        
         
         /*whiteBgImgView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        whiteBgImgView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        whiteBgImgView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
-        whiteBgImgView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        */
+         whiteBgImgView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+         whiteBgImgView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
+         whiteBgImgView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+         */
         registerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         //registerLabel.topAnchor.constraint(equalTo: whiteBgImgView.frame.origin.x, constant: -50).isActive = true
         registerLabel.topAnchor.constraint(equalTo: whiteBgImgView.topAnchor, constant: -200).isActive = true // static value of 200 needs adjusts for other devices
@@ -140,7 +140,7 @@ class RegisterController: UIViewController{
         inputContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
         inputContainerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         
-
+        
         //inputContainerView.addSubview(passSeparator)
         inputContainerView.addSubview(emailTextField)
         inputContainerView.addSubview(emailSeparator)
@@ -165,4 +165,8 @@ class RegisterController: UIViewController{
     }
 }
 
-
+extension UIColor {
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
+        self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
+    }
+}
