@@ -9,7 +9,12 @@
 import UIKit
 
 class RegisterController: UIViewController{
-    
+   
+    let titleView: UIView = {
+        let view = UIView()
+        
+        return view
+    }()
     let passSeparator: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
@@ -66,8 +71,8 @@ class RegisterController: UIViewController{
     }()
     let registerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Registration"
-        label.font=UIFont.init(name: "Futura", size: 48)
+        label.text = "Create an Account"
+        label.font=UIFont.init(name: "Futura", size: 40)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = UIColor.black
@@ -75,11 +80,17 @@ class RegisterController: UIViewController{
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let bgImg = UIImageView(frame: UIScreen.main.bounds)
         bgImg.image = UIImage(named: "blurGroceryStoreImg")
         bgImg.contentMode = .scaleAspectFill
         self.view.insertSubview(bgImg, at: 0)
+        self.title = "Registration"
+        UINavigationBar.appearance().backgroundColor = UIColor.blue
         
+        //self.navigationController?.navigationBar.topItem?.title = "Registration"
+        navigationItem.title = "Registration"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector (backToMainMenu))
         view.addSubview(inputContainerView)
         view.addSubview(registerBtn)
         //view.addSubview(<#T##view: UIView##UIView#>)
@@ -91,6 +102,10 @@ class RegisterController: UIViewController{
         setupLogRegButton()
         setUpRegLabel()
         
+    }
+    func backToMainMenu(){
+        let loginController = MainMenuController()
+        present(loginController, animated: true, completion: nil)
     }
     func setUpRegLabel(){
         registerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

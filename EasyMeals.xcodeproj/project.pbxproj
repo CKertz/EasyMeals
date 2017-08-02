@@ -11,7 +11,7 @@
 		3F5212A81F2AF36000B94D22 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5212A71F2AF36000B94D22 /* SignInController.swift */; };
 		3FF731361F1860990016F2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731351F1860990016F2A7 /* AppDelegate.swift */; };
 		3FF731381F1860990016F2A7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731371F1860990016F2A7 /* FirstViewController.swift */; };
-		3FF7313A1F1860990016F2A7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731391F1860990016F2A7 /* SecondViewController.swift */; };
+		3FF7313A1F1860990016F2A7 /*   MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731391F1860990016F2A7 /*   MainMenuController.swift */; };
 		3FF7313D1F1860990016F2A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7313B1F1860990016F2A7 /* Main.storyboard */; };
 		3FF7313F1F18609A0016F2A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7313E1F18609A0016F2A7 /* Assets.xcassets */; };
 		3FF731421F18609A0016F2A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF731401F18609A0016F2A7 /* LaunchScreen.storyboard */; };
@@ -42,7 +42,7 @@
 		3FF731321F1860990016F2A7 /* EasyMeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF731351F1860990016F2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF731371F1860990016F2A7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		3FF731391F1860990016F2A7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3FF731391F1860990016F2A7 /*   MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "  MainMenuController.swift"; sourceTree = "<group>"; };
 		3FF7313C1F1860990016F2A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FF7313E1F18609A0016F2A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF731411F18609A0016F2A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			children = (
 				3FF731351F1860990016F2A7 /* AppDelegate.swift */,
 				3FF731371F1860990016F2A7 /* FirstViewController.swift */,
-				3FF731391F1860990016F2A7 /* SecondViewController.swift */,
+				3FF731391F1860990016F2A7 /*   MainMenuController.swift */,
 				3F5212A51F2AB77000B94D22 /* RegisterController.swift */,
 				3F5212A71F2AF36000B94D22 /* SignInController.swift */,
 				3FF7313B1F1860990016F2A7 /* Main.storyboard */,
@@ -272,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5212A61F2AB77000B94D22 /* RegisterController.swift in Sources */,
-				3FF7313A1F1860990016F2A7 /* SecondViewController.swift in Sources */,
+				3FF7313A1F1860990016F2A7 /*   MainMenuController.swift in Sources */,
 				3FF731361F1860990016F2A7 /* AppDelegate.swift in Sources */,
 				3F5212A81F2AF36000B94D22 /* SignInController.swift in Sources */,
 				3FF731381F1860990016F2A7 /* FirstViewController.swift in Sources */,

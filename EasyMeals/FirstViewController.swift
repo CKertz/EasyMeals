@@ -36,7 +36,7 @@ class FirstViewController: UITableViewController {
         setupMainMenu()*/
     }
     func handleLogout(){
-        let loginController = SecondViewController()
+        let loginController = MainMenuController()
         present(loginController, animated: true, completion: nil)
     }
    /* func setupMainMenu(){

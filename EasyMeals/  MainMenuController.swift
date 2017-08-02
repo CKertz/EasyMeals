@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class MainMenuController: UIViewController {
     
     let bgImage: UIImageView = {
         let image = UIImageView()
@@ -77,7 +77,7 @@ class SecondViewController: UIViewController {
         bgImg.image = UIImage(named: "blurGroceryStoreImg")
         bgImg.contentMode = .scaleAspectFill
         self.view.insertSubview(bgImg, at: 0)
-
+        self.navigationController?.navigationBar.isHidden = true
         view.addSubview(loginContainerView)
         view.addSubview(registerButton)
         view.addSubview(signInButton)
@@ -133,6 +133,7 @@ class SecondViewController: UIViewController {
         let loginController = SignInController()
         present(loginController, animated: true, completion: nil)
     }
+
 
 }
 
