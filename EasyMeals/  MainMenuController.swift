@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainMenuController: UIViewController {
     
@@ -136,4 +137,5 @@ class MainMenuController: UIViewController {
 
 
 }
+
 

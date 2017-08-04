@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterController: UIViewController{
    
@@ -44,6 +45,7 @@ class RegisterController: UIViewController{
         button.layer.masksToBounds = true
         button.titleLabel?.font = UIFont.init(name: "Futura", size: 25)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
     let passTextField: UITextField = {
@@ -95,6 +97,7 @@ class RegisterController: UIViewController{
         view.addSubview(registerBtn)
         //view.addSubview(<#T##view: UIView##UIView#>)
         view.addSubview(registerLabel)
+        view.addGestureRecognizer(tap)
         //view.addSubview(emailTextField)
         
         //setUpRegistrationUI()
@@ -177,6 +180,23 @@ class RegisterController: UIViewController{
         passTextField.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/2).isActive = true
         
         
+    }
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterController.dismissKeyboard))
+    func dismissKeyboard(){
+        print(111)
+        view.endEditing(true)
+    }
+    func handleRegister(){
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passTextField.text!, completion: {(user, error) in
+            
+            
+            if error != nil {
+                print(error as Any)
+                return
+            }
+            
+            
+            })
     }
 }
 

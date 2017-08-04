@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		327D83458D3F88B0B12D0BC5 /* Pods_EasyMealsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AB7ACFC1C77B2F18CD38B9 /* Pods_EasyMealsTests.framework */; };
+		3F4E16311F33E91B00CBB5C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E16301F33E91B00CBB5C6 /* GoogleService-Info.plist */; };
 		3F5212A61F2AB77000B94D22 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5212A51F2AB77000B94D22 /* RegisterController.swift */; };
 		3F5212A81F2AF36000B94D22 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5212A71F2AF36000B94D22 /* SignInController.swift */; };
 		3FF731361F1860990016F2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731351F1860990016F2A7 /* AppDelegate.swift */; };
@@ -17,6 +19,8 @@
 		3FF731421F18609A0016F2A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF731401F18609A0016F2A7 /* LaunchScreen.storyboard */; };
 		3FF7314D1F18609A0016F2A7 /* EasyMealsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7314C1F18609A0016F2A7 /* EasyMealsTests.swift */; };
 		3FF731581F18609A0016F2A7 /* EasyMealsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731571F18609A0016F2A7 /* EasyMealsUITests.swift */; };
+		5C3EFA265B52453CA553CFEE /* Pods_EasyMealsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF925B844FBCC9F226DBD2 /* Pods_EasyMealsUITests.framework */; };
+		A21B9DAAF57AD2FCB5467F0F /* Pods_EasyMeals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8445796EB4541DD2399711 /* Pods_EasyMeals.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1151B67AFEEA2968F004251E /* Pods-EasyMeals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMeals.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMeals/Pods-EasyMeals.release.xcconfig"; sourceTree = "<group>"; };
+		157C427F3B6D1DF6D0B38B38 /* Pods-EasyMealsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMealsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMealsTests/Pods-EasyMealsTests.release.xcconfig"; sourceTree = "<group>"; };
+		35F8A88B59DCB87865F82988 /* Pods-EasyMealsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMealsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMealsUITests/Pods-EasyMealsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F4E16301F33E91B00CBB5C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F5212A51F2AB77000B94D22 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		3F5212A71F2AF36000B94D22 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		3FF731321F1860990016F2A7 /* EasyMeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +61,12 @@
 		3FF731531F18609A0016F2A7 /* EasyMealsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyMealsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF731571F18609A0016F2A7 /* EasyMealsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyMealsUITests.swift; sourceTree = "<group>"; };
 		3FF731591F18609A0016F2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CAF925B844FBCC9F226DBD2 /* Pods_EasyMealsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyMealsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C69CA30A28E6031EBD2F151 /* Pods-EasyMealsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMealsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMealsUITests/Pods-EasyMealsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6A8445796EB4541DD2399711 /* Pods_EasyMeals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyMeals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB83D321469E0BA1D2BE813 /* Pods-EasyMeals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMeals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMeals/Pods-EasyMeals.debug.xcconfig"; sourceTree = "<group>"; };
+		7B49820D63D8C44CFD70380C /* Pods-EasyMealsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMealsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMealsTests/Pods-EasyMealsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94AB7ACFC1C77B2F18CD38B9 /* Pods_EasyMealsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyMealsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A21B9DAAF57AD2FCB5467F0F /* Pods_EasyMeals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327D83458D3F88B0B12D0BC5 /* Pods_EasyMealsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +90,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C3EFA265B52453CA553CFEE /* Pods_EasyMealsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3418AC56F0509E8D7229058F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A8445796EB4541DD2399711 /* Pods_EasyMeals.framework */,
+				94AB7ACFC1C77B2F18CD38B9 /* Pods_EasyMealsTests.framework */,
+				4CAF925B844FBCC9F226DBD2 /* Pods_EasyMealsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FF731291F1860990016F2A7 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +114,9 @@
 				3FF7314B1F18609A0016F2A7 /* EasyMealsTests */,
 				3FF731561F18609A0016F2A7 /* EasyMealsUITests */,
 				3FF731331F1860990016F2A7 /* Products */,
+				3F4E16301F33E91B00CBB5C6 /* GoogleService-Info.plist */,
+				479CC44A9C9D2AC25A602716 /* Pods */,
+				3418AC56F0509E8D7229058F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +164,19 @@
 			path = EasyMealsUITests;
 			sourceTree = "<group>";
 		};
+		479CC44A9C9D2AC25A602716 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EB83D321469E0BA1D2BE813 /* Pods-EasyMeals.debug.xcconfig */,
+				1151B67AFEEA2968F004251E /* Pods-EasyMeals.release.xcconfig */,
+				7B49820D63D8C44CFD70380C /* Pods-EasyMealsTests.debug.xcconfig */,
+				157C427F3B6D1DF6D0B38B38 /* Pods-EasyMealsTests.release.xcconfig */,
+				35F8A88B59DCB87865F82988 /* Pods-EasyMealsUITests.debug.xcconfig */,
+				5C69CA30A28E6031EBD2F151 /* Pods-EasyMealsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FF7315C1F18609A0016F2A7 /* Build configuration list for PBXNativeTarget "EasyMeals" */;
 			buildPhases = (
+				6D52FB88122784DFDACD33FE /* [CP] Check Pods Manifest.lock */,
 				3FF7312E1F1860990016F2A7 /* Sources */,
 				3FF7312F1F1860990016F2A7 /* Frameworks */,
 				3FF731301F1860990016F2A7 /* Resources */,
+				FD4DC1674CEE6A12CE96DF1B /* [CP] Embed Pods Frameworks */,
+				55B9A66B7E87725C480A542D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FF7315F1F18609A0016F2A7 /* Build configuration list for PBXNativeTarget "EasyMealsTests" */;
 			buildPhases = (
+				6C0B58B72B4A36C068AFA496 /* [CP] Check Pods Manifest.lock */,
 				3FF731441F18609A0016F2A7 /* Sources */,
 				3FF731451F18609A0016F2A7 /* Frameworks */,
 				3FF731461F18609A0016F2A7 /* Resources */,
+				FAAD78B33F52D4C4075FBED4 /* [CP] Embed Pods Frameworks */,
+				65CE40D08063D0415D790A65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FF731621F18609A0016F2A7 /* Build configuration list for PBXNativeTarget "EasyMealsUITests" */;
 			buildPhases = (
+				50D897BB1965EA611E03C89F /* [CP] Check Pods Manifest.lock */,
 				3FF7314F1F18609A0016F2A7 /* Sources */,
 				3FF731501F18609A0016F2A7 /* Frameworks */,
 				3FF731511F18609A0016F2A7 /* Resources */,
+				319FEA97054D2D7580C55DCF /* [CP] Embed Pods Frameworks */,
+				34B1027BB2622CBC0534968B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF731421F18609A0016F2A7 /* LaunchScreen.storyboard in Resources */,
+				3F4E16311F33E91B00CBB5C6 /* GoogleService-Info.plist in Resources */,
 				3FF7313F1F18609A0016F2A7 /* Assets.xcassets in Resources */,
 				3FF7313D1F1860990016F2A7 /* Main.storyboard in Resources */,
 			);
@@ -265,6 +318,160 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		319FEA97054D2D7580C55DCF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyMealsUITests/Pods-EasyMealsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34B1027BB2622CBC0534968B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyMealsUITests/Pods-EasyMealsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50D897BB1965EA611E03C89F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyMealsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55B9A66B7E87725C480A542D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyMeals/Pods-EasyMeals-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65CE40D08063D0415D790A65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyMealsTests/Pods-EasyMealsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C0B58B72B4A36C068AFA496 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyMealsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D52FB88122784DFDACD33FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyMeals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAAD78B33F52D4C4075FBED4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyMealsTests/Pods-EasyMealsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4DC1674CEE6A12CE96DF1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EasyMeals/Pods-EasyMeals-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyMeals/Pods-EasyMeals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FF7312E1F1860990016F2A7 /* Sources */ = {
@@ -427,6 +634,7 @@
 		};
 		3FF7315D1F18609A0016F2A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EB83D321469E0BA1D2BE813 /* Pods-EasyMeals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 244E6GEXYK;
@@ -440,6 +648,7 @@
 		};
 		3FF7315E1F18609A0016F2A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1151B67AFEEA2968F004251E /* Pods-EasyMeals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 244E6GEXYK;
@@ -453,6 +662,7 @@
 		};
 		3FF731601F18609A0016F2A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B49820D63D8C44CFD70380C /* Pods-EasyMealsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +678,7 @@
 		};
 		3FF731611F18609A0016F2A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 157C427F3B6D1DF6D0B38B38 /* Pods-EasyMealsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -483,6 +694,7 @@
 		};
 		3FF731631F18609A0016F2A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F8A88B59DCB87865F82988 /* Pods-EasyMealsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 244E6GEXYK;
@@ -497,6 +709,7 @@
 		};
 		3FF731641F18609A0016F2A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C69CA30A28E6031EBD2F151 /* Pods-EasyMealsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 244E6GEXYK;
