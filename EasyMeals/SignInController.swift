@@ -82,15 +82,23 @@ class SignInController: UIViewController{
         
         view.addSubview(inputContainerView)
         view.addSubview(registerBtn)
-        //view.addSubview(<#T##view: UIView##UIView#>)
         view.addSubview(registerLabel)
         //view.addSubview(emailTextField)
-        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
+        self.navigationController?.navigationBar.isHidden = false
         //setUpRegistrationUI()
         setUpInputContainerView()
         setupLogRegButton()
         setUpRegLabel()
         
+    }
+    func backToMainMenu(){
+        //dismiss(animated: true, completion: nil)
+        //self.navigationController?.pushViewController(MainMenuController(), animated: true)
+        self.navigationController?.popViewController(animated: true)
+
+        let loginController = MainMenuController()
+       // present(loginController, animated: true, completion: nil)
     }
     func setUpRegLabel(){
         registerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

@@ -86,29 +86,36 @@ class RegisterController: UIViewController{
         let bgImg = UIImageView(frame: UIScreen.main.bounds)
         bgImg.image = UIImage(named: "blurGroceryStoreImg")
         bgImg.contentMode = .scaleAspectFill
-        self.view.insertSubview(bgImg, at: 0)
+        //self.view.insertSubview(bgImg, at: 0)
         self.title = "Registration"
         UINavigationBar.appearance().backgroundColor = UIColor.blue
-        
+        self.navigationController?.navigationBar.backgroundColor = UIColor.brown // doesn't work
         //self.navigationController?.navigationBar.topItem?.title = "Registration"
         navigationItem.title = "Registration"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector (backToMainMenu))
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector (backToMainMenu))
         view.addSubview(inputContainerView)
         view.addSubview(registerBtn)
         //view.addSubview(<#T##view: UIView##UIView#>)
         view.addSubview(registerLabel)
-        view.addGestureRecognizer(tap)
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))//Close view if tapped on screen
         //view.addSubview(emailTextField)
-        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
+        self.navigationController?.navigationBar.isHidden = false// Isn't default because in MainMenuController we want it do be hidden
+        view.backgroundColor = UIColor.white
+
         //setUpRegistrationUI()
         setUpInputContainerView()
         setupLogRegButton()
         setUpRegLabel()
         
     }
+
     func backToMainMenu(){
+        //dismiss(animated: true, completion: nil)
+       // self.navigationController?.pushViewController(MainMenuController(), animated: true)
+        self.navigationController?.popViewController(animated: true)
         let loginController = MainMenuController()
-        present(loginController, animated: true, completion: nil)
+        //present(loginController, animated: true, completion: nil)
     }
     func setUpRegLabel(){
         registerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -181,12 +188,11 @@ class RegisterController: UIViewController{
         
         
     }
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterController.dismissKeyboard))
-    func dismissKeyboard(){
-        print(111)
-        view.endEditing(true)
-    }
+
     func handleRegister(){
+        guard let email = emailTextField.text, let password = passTextField.text else {
+            return
+        }
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passTextField.text!, completion: {(user, error) in
             
             
@@ -194,7 +200,19 @@ class RegisterController: UIViewController{
                 print(error as Any)
                 return
             }
+            guard let uid = user?.uid else{
+                return
+            }
+            let ref = Database.database().reference(fromURL: "https://easymeals-ad4d4.firebaseio.com/")
+            let usersReference = ref.child("users").child(uid)
+            let values = ["email": email, "password": password]
+            usersReference.updateChildValues(values, withCompletionBlock: {(err, ref) in
             
+                if err != nil {
+                    print(err)
+                    return
+                }
+            })
             
             })
     }

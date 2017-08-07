@@ -37,6 +37,7 @@ class MainMenuController: UIViewController {
         label.attributedText = NSAttributedString(string: "Continue as guest", attributes:
             [NSUnderlineStyleAttributeName:NSUnderlineStyle.styleSingle.rawValue])
         label.textColor = UIColor.blue
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         return label
     }()
     let signInButton: UIButton = {
@@ -71,21 +72,30 @@ class MainMenuController: UIViewController {
         
         return view
     }()
+    let continueBtn: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor.clear
+        button.setTitle("Continue as guest", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(handleContinue), for: .touchUpInside)
+        button.titleLabel?.font = UIFont.init(name: "Futura", size: 20)
+        return button
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
         let bgImg = UIImageView(frame: UIScreen.main.bounds)
         bgImg.image = UIImage(named: "blurGroceryStoreImg")
         bgImg.contentMode = .scaleAspectFill
-        self.view.insertSubview(bgImg, at: 0)
+        //self.view.insertSubview(bgImg, at: 0)
         self.navigationController?.navigationBar.isHidden = true
         view.addSubview(loginContainerView)
         view.addSubview(registerButton)
         view.addSubview(signInButton)
-        view.addSubview(continueAsGuestLabel)
+        //view.addSubview(continueAsGuestLabel)
         view.addSubview(easyMealsLabel)
+        view.addSubview(continueBtn)
         //view.addSubview(bgImage)
-        
         //setupLoginContainer()
         setUpUI()
 
@@ -107,17 +117,35 @@ class MainMenuController: UIViewController {
         signInButton.widthAnchor.constraint(equalTo: registerButton.widthAnchor).isActive = true
         signInButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        
+        signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        signInButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        signInButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
+        signInButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        
         easyMealsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        easyMealsLabel.bottomAnchor.constraint(equalTo: registerButton.topAnchor, constant: -10).isActive = true
+        easyMealsLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
+        easyMealsLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        
+        /*easyMealsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         easyMealsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         easyMealsLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
-        easyMealsLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        easyMealsLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true*/
         
         
                 //continueAsGuestLabel.leftAnchor.constraint(equalTo: registerButton.leftAnchor).isActive = true
-        continueAsGuestLabel.leftAnchor.constraint(equalTo: registerButton.leftAnchor).isActive = true
+        
+        
+        continueBtn.leftAnchor.constraint(equalTo: registerButton.leftAnchor).isActive = true
+        continueBtn.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 10).isActive = true
+        continueBtn.widthAnchor.constraint(equalTo: registerButton.widthAnchor).isActive = true
+        continueBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+       /* continueAsGuestLabel.leftAnchor.constraint(equalTo: registerButton.leftAnchor).isActive = true
         continueAsGuestLabel.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 10).isActive = true
         continueAsGuestLabel.widthAnchor.constraint(equalTo: registerButton.widthAnchor).isActive = true
-        continueAsGuestLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        continueAsGuestLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true*/
         
         /*bgImage.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         bgImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -127,12 +155,30 @@ class MainMenuController: UIViewController {
         
     }
     func handleRegister(){
-        let loginController = RegisterController()
-        present(loginController, animated: true, completion: nil)
+        //self.navigationController?.popViewController(animated: true)
+        self.navigationController?.pushViewController(RegisterController(), animated: true)
+        
+        
+        //present(loginController, animated: true, completion: nil) DOES NOT work with navigationController
     }
     func handleSignIn(){
+       // self.navigationController?.popViewController(animated: true)
+        self.navigationController?.pushViewController(SignInController(), animated: true)
+
         let loginController = SignInController()
-        present(loginController, animated: true, completion: nil)
+        //present(loginController, animated: true, completion: nil)
+    }
+    func handleContinue(){
+        self.navigationController?.pushViewController(TabMenuController(), animated: true)
+
+        let loginController = TabMenuController()
+       // present(loginController, animated: true, completion: nil)
+    }
+    func handleTap(sender: UITapGestureRecognizer){
+       // guard let a = (sender.view.as? UILabel)?.text else {return}
+        print (333)
+        let tabController = TabMenuController()
+        present(tabController, animated: true, completion: nil)
     }
 
 
