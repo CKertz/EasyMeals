@@ -83,12 +83,15 @@ class MainMenuController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
+        
         let bgImg = UIImageView(frame: UIScreen.main.bounds)
         bgImg.image = UIImage(named: "blurGroceryStoreImg")
         bgImg.contentMode = .scaleAspectFill
         //self.view.insertSubview(bgImg, at: 0)
-        self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.setNavigationBarHidden(true, animated: true) // WORKS
+        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
+        //self.navigationController?.navigationBar.isHidden = true does NOT Work
         view.addSubview(loginContainerView)
         view.addSubview(registerButton)
         view.addSubview(signInButton)
@@ -180,7 +183,9 @@ class MainMenuController: UIViewController {
         let tabController = TabMenuController()
         present(tabController, animated: true, completion: nil)
     }
-
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 
 }
 

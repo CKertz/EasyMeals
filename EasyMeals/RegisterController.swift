@@ -39,7 +39,7 @@ class RegisterController: UIViewController{
     }()
     let registerBtn: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor.red
+        button.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
         button.setTitle("Register Now", for: .normal)
         button.layer.cornerRadius = 6
         button.layer.masksToBounds = true
@@ -99,8 +99,10 @@ class RegisterController: UIViewController{
         view.addSubview(registerLabel)
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))//Close view if tapped on screen
         //view.addSubview(emailTextField)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
         self.navigationController?.navigationBar.isHidden = false// Isn't default because in MainMenuController we want it do be hidden
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+
         view.backgroundColor = UIColor.white
 
         //setUpRegistrationUI()

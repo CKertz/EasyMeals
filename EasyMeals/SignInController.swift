@@ -33,7 +33,7 @@ class SignInController: UIViewController{
     }()
     let registerBtn: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor.red
+        button.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
         button.setTitle("Sign In", for: .normal)
         button.layer.cornerRadius = 6
         button.layer.masksToBounds = true
@@ -79,12 +79,12 @@ class SignInController: UIViewController{
         bgImg.image = UIImage(named: "blurGroceryStoreImg")
         bgImg.contentMode = .scaleAspectFill
         self.view.insertSubview(bgImg, at: 0)
-        
+        navigationItem.title = "Sign in"
         view.addSubview(inputContainerView)
         view.addSubview(registerBtn)
         view.addSubview(registerLabel)
         //view.addSubview(emailTextField)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
         self.navigationController?.navigationBar.isHidden = false
         //setUpRegistrationUI()
         setUpInputContainerView()
