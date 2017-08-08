@@ -78,7 +78,7 @@ class SignInController: UIViewController{
         let bgImg = UIImageView(frame: UIScreen.main.bounds)
         bgImg.image = UIImage(named: "blurGroceryStoreImg")
         bgImg.contentMode = .scaleAspectFill
-        self.view.insertSubview(bgImg, at: 0)
+        //self.view.insertSubview(bgImg, at: 0)
         navigationItem.title = "Sign in"
         view.addSubview(inputContainerView)
         view.addSubview(registerBtn)
@@ -87,6 +87,8 @@ class SignInController: UIViewController{
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
         self.navigationController?.navigationBar.isHidden = false
         //setUpRegistrationUI()
+        view.backgroundColor = UIColor(colorLiteralRed: 0.02, green: 0.00, blue: 0.49, alpha: 1)
+
         setUpInputContainerView()
         setupLogRegButton()
         setUpRegLabel()

@@ -77,7 +77,7 @@ class RegisterController: UIViewController{
         label.font=UIFont.init(name: "Futura", size: 40)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         return label
     }()
     override func viewDidLoad() {
@@ -103,7 +103,7 @@ class RegisterController: UIViewController{
         self.navigationController?.navigationBar.isHidden = false// Isn't default because in MainMenuController we want it do be hidden
         self.navigationController?.setNavigationBarHidden(false, animated: true)
 
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(colorLiteralRed: 0.02, green: 0.00, blue: 0.49, alpha: 1)
 
         //setUpRegistrationUI()
         setUpInputContainerView()
@@ -214,6 +214,9 @@ class RegisterController: UIViewController{
                     print(err)
                     return
                 }
+                let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
+
+                self.present(tabViewController, animated: true, completion: nil)//
             })
             
             })
