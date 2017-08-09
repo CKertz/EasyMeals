@@ -1,33 +1,22 @@
 //
-//  tabMenuController.swift
+//  TabMenuController.swift
 //  EasyMeals
 //
-//  Created by Cooper on 8/4/17.
+//  Created by Cooper on 8/8/17.
 //  Copyright © 2017 TBD. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class TabMenuController: UICollectionViewController {
-    
+class TabMenuController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
-        if Auth.auth().currentUser?.uid == nil {
-            handleLogout()
-        }
-        collectionView?.backgroundColor = .green
-    }
-    func handleLogout(){
-        do{
-            try Auth.auth().signOut()
-        }catch let logoutError{
-            print(logoutError)
-        }
+        let layout = UICollectionViewFlowLayout()
+        let listController = ListController(collectionViewLayout: layout)
+        let navController = UINavigationController(rootViewController: listController)
+        navController.tabBarItem.title = "Lists"
+        navController.tabBarItem.image = UIImage(named: "list")
         
-        present(MainMenuController(), animated: true, completion: nil)
+        viewControllers = [navController]
     }
-    let listTab = UITabBarItem(title: "Lists", image: nil, selectedImage: nil)
-    
 }

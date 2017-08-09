@@ -24,8 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         //window?.rootViewController = UINavigationController(rootViewController: MainMenuController())
-        
-        let tabMenuController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
+        let tabViewController = TabMenuController()
+
+       // let tabMenuController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
         let nav1 = UINavigationController()
         let firstView = MainMenuController(nibName: nil, bundle: nil)
         let secondView = RegisterController(nibName: nil, bundle: nil)

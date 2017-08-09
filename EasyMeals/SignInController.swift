@@ -33,7 +33,7 @@ class SignInController: UIViewController{
     }()
     let registerBtn: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
+        button.backgroundColor = UIColor(colorLiteralRed: 0.02, green: 0.00, blue: 0.49, alpha: 1)
         button.setTitle("Sign In", for: .normal)
         button.layer.cornerRadius = 6
         button.layer.masksToBounds = true
@@ -70,7 +70,7 @@ class SignInController: UIViewController{
         label.font=UIFont.init(name: "Futura", size: 48)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         return label
     }()
     override func viewDidLoad() {
@@ -87,7 +87,8 @@ class SignInController: UIViewController{
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
         self.navigationController?.navigationBar.isHidden = false
         //setUpRegistrationUI()
-        view.backgroundColor = UIColor(colorLiteralRed: 0.02, green: 0.00, blue: 0.49, alpha: 1)
+        view.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
+
 
         setUpInputContainerView()
         setupLogRegButton()

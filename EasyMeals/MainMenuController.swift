@@ -25,7 +25,7 @@ class MainMenuController: UIViewController {
         label.font = UIFont.boldSystemFont(ofSize: 48)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         return label
     }()
     let continueAsGuestLabel: UILabel = {
@@ -172,7 +172,8 @@ class MainMenuController: UIViewController {
         //present(loginController, animated: true, completion: nil)
     }
     func handleContinue(){
-        let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
+        let tabViewController = TabMenuController()
+        //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
         self.navigationController?.pushViewController(tabViewController, animated: true)
 
         let loginController = TabMenuController()

@@ -39,7 +39,7 @@ class RegisterController: UIViewController{
     }()
     let registerBtn: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
+        button.backgroundColor = UIColor(colorLiteralRed: 0.02, green: 0.00, blue: 0.49, alpha: 1)
         button.setTitle("Register Now", for: .normal)
         button.layer.cornerRadius = 6
         button.layer.masksToBounds = true
@@ -103,7 +103,7 @@ class RegisterController: UIViewController{
         self.navigationController?.navigationBar.isHidden = false// Isn't default because in MainMenuController we want it do be hidden
         self.navigationController?.setNavigationBarHidden(false, animated: true)
 
-        view.backgroundColor = UIColor(colorLiteralRed: 0.02, green: 0.00, blue: 0.49, alpha: 1)
+        view.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
 
         //setUpRegistrationUI()
         setUpInputContainerView()
@@ -214,7 +214,9 @@ class RegisterController: UIViewController{
                     print(err)
                     return
                 }
-                let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
+                let tabViewController = TabMenuController()
+
+                //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
 
                 self.present(tabViewController, animated: true, completion: nil)//
             })
