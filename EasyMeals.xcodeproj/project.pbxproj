@@ -13,6 +13,7 @@
 		3F5212A81F2AF36000B94D22 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5212A71F2AF36000B94D22 /* SignInController.swift */; };
 		3FA3C19C1F355B6000C060C0 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3C19B1F355B6000C060C0 /* ListController.swift */; };
 		3FA3C19E1F3AB7AF00C060C0 /* TabMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3C19D1F3AB7AF00C060C0 /* TabMenuController.swift */; };
+		3FB5A34C1F53B9D800CDBACD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5A34B1F53B9D800CDBACD /* SettingsController.swift */; };
 		3FF731361F1860990016F2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731351F1860990016F2A7 /* AppDelegate.swift */; };
 		3FF731381F1860990016F2A7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731371F1860990016F2A7 /* FirstViewController.swift */; };
 		3FF7313A1F1860990016F2A7 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731391F1860990016F2A7 /* MainMenuController.swift */; };
@@ -51,6 +52,7 @@
 		3F5212A71F2AF36000B94D22 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		3FA3C19B1F355B6000C060C0 /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		3FA3C19D1F3AB7AF00C060C0 /* TabMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuController.swift; sourceTree = "<group>"; };
+		3FB5A34B1F53B9D800CDBACD /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		3FF731321F1860990016F2A7 /* EasyMeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF731351F1860990016F2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF731371F1860990016F2A7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -139,10 +141,11 @@
 			children = (
 				3FF731351F1860990016F2A7 /* AppDelegate.swift */,
 				3FF731371F1860990016F2A7 /* FirstViewController.swift */,
+				3FA3C19B1F355B6000C060C0 /* ListController.swift */,
 				3FF731391F1860990016F2A7 /* MainMenuController.swift */,
 				3F5212A51F2AB77000B94D22 /* RegisterController.swift */,
+				3FB5A34B1F53B9D800CDBACD /* SettingsController.swift */,
 				3F5212A71F2AF36000B94D22 /* SignInController.swift */,
-				3FA3C19B1F355B6000C060C0 /* ListController.swift */,
 				3FA3C19D1F3AB7AF00C060C0 /* TabMenuController.swift */,
 				3FF7313B1F1860990016F2A7 /* Main.storyboard */,
 				3FF7313E1F18609A0016F2A7 /* Assets.xcassets */,
@@ -484,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB5A34C1F53B9D800CDBACD /* SettingsController.swift in Sources */,
 				3F5212A61F2AB77000B94D22 /* RegisterController.swift in Sources */,
 				3FF7313A1F1860990016F2A7 /* MainMenuController.swift in Sources */,
 				3FF731361F1860990016F2A7 /* AppDelegate.swift in Sources */,

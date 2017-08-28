@@ -1,20 +1,20 @@
 //
-//  tabMenuController.swift
+//  SettingsController.swift
 //  EasyMeals
 //
-//  Created by Cooper on 8/4/17.
+//  Created by Cooper on 8/27/17.
 //  Copyright © 2017 TBD. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class ListController: UICollectionViewController {
+class SettingsController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
-      //  self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+        //  self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
         self.navigationController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         if Auth.auth().currentUser?.uid == nil {
             handleLogout()

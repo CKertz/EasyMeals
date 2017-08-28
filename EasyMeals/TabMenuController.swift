@@ -12,11 +12,18 @@ class TabMenuController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout = UICollectionViewFlowLayout()
-        let listController = ListController(collectionViewLayout: layout)
-        let navController = UINavigationController(rootViewController: listController)
-        navController.tabBarItem.title = "Lists"
-        navController.tabBarItem.image = UIImage(named: "list")
+        let rootListController = ListController(collectionViewLayout: layout)
+        let listNavigationController = UINavigationController(rootViewController: rootListController)
+        listNavigationController.tabBarItem.title = "Lists"
+        listNavigationController.tabBarItem.image = UIImage(named: "list")
         
-        viewControllers = [navController]
+        let rootSettingsController = SettingsController()
+        let settingsNavigationController = UINavigationController(rootViewController: rootSettingsController)
+        settingsNavigationController.tabBarItem.title = "Lists"
+        settingsNavigationController.tabBarItem.image = UIImage(named: "list")
+        
+        settingsNavigationController.tabBarItem.title = "Settings"
+        settingsNavigationController.tabBarItem.image = UIImage(named: "gear" )
+        viewControllers = [listNavigationController,settingsNavigationController]
     }
 }

@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         UIApplication.shared.statusBarStyle = .lightContent
         
+        
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         //window?.rootViewController = UINavigationController(rootViewController: MainMenuController())

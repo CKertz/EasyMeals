@@ -80,6 +80,8 @@ class SignInController: UIViewController{
         bgImg.contentMode = .scaleAspectFill
         //self.view.insertSubview(bgImg, at: 0)
         navigationItem.title = "Sign in"
+
+        //navigationItem.title = UIColor.white
         view.addSubview(inputContainerView)
         view.addSubview(registerBtn)
         view.addSubview(registerLabel)
