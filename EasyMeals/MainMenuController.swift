@@ -170,7 +170,7 @@ class MainMenuController: UIViewController {
        // self.navigationController?.popViewController(animated: true)
         self.navigationController?.pushViewController(SignInController(), animated: true)
 
-        let loginController = SignInController()
+       // let loginController = SignInController()
         //present(loginController, animated: true, completion: nil)
     }
     func handleContinue(){
@@ -178,7 +178,7 @@ class MainMenuController: UIViewController {
         //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
         self.navigationController?.pushViewController(tabViewController, animated: true)
 
-        let loginController = TabMenuController()
+        //let loginController = TabMenuController()
        // present(loginController, animated: true, completion: nil)
     }
     func handleTap(sender: UITapGestureRecognizer){

@@ -31,7 +31,7 @@ class SignInController: UIViewController{
         return view
         
     }()
-    let registerBtn: UIButton = {
+    let signInBtn: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(colorLiteralRed: 0.02, green: 0.00, blue: 0.49, alpha: 1)
         button.setTitle("Sign In", for: .normal)
@@ -39,6 +39,7 @@ class SignInController: UIViewController{
         button.layer.masksToBounds = true
         button.titleLabel?.font = UIFont.init(name: "Futura", size: 25)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
         return button
     }()
     let passTextField: UITextField = {
@@ -83,14 +84,14 @@ class SignInController: UIViewController{
 
         //navigationItem.title = UIColor.white
         view.addSubview(inputContainerView)
-        view.addSubview(registerBtn)
+        view.addSubview(signInBtn)
         view.addSubview(registerLabel)
         //view.addSubview(emailTextField)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
         self.navigationController?.navigationBar.isHidden = false
         //setUpRegistrationUI()
         view.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
-
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
 
         setUpInputContainerView()
         setupLogRegButton()
@@ -116,12 +117,12 @@ class SignInController: UIViewController{
     func setupLogRegButton(){
         
         //Constraints :  need x,y, width and height
-        registerBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        registerBtn.topAnchor.constraint(equalTo: inputContainerView.bottomAnchor, constant: 12).isActive = true
+        signInBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        signInBtn.topAnchor.constraint(equalTo: inputContainerView.bottomAnchor, constant: 12).isActive = true
         
         //how wide
-        registerBtn.widthAnchor.constraint(equalTo: inputContainerView.widthAnchor).isActive = true
-        registerBtn.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        signInBtn.widthAnchor.constraint(equalTo: inputContainerView.widthAnchor).isActive = true
+        signInBtn.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
     }
     
@@ -175,6 +176,16 @@ class SignInController: UIViewController{
         passTextField.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/2).isActive = true
         
         
+    }
+    func handleSignIn(){
+        let tabViewController = TabMenuController()
+        //let tabViewController = TabMenuController()
+        
+        //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        self.present(tabViewController, animated: true, completion: nil)
+        //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
+       // self.navigationController?.pushViewController(tabViewController, animated: true)
     }
 }
 

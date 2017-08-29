@@ -13,7 +13,7 @@ class SettingsController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: nil)
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: nil)
         //  self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
         self.navigationController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         tableView.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
