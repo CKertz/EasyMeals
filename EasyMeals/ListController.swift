@@ -24,7 +24,7 @@ class ListController: UICollectionViewController {
         if Auth.auth().currentUser?.uid == nil {
             handleLogout()
         }
-        collectionView?.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
+        collectionView?.backgroundColor = UIColor.white
     }
     func handleLogout(){
         do{

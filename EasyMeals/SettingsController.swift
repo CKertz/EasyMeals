@@ -73,6 +73,13 @@ class SettingsController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Num: \(indexPath.row)")
         print("Value: \(myArray[indexPath.row])")
+        if (indexPath.row == 0){
+            print("signing out")
+            try! Auth.auth().signOut()
+            let mainMenu = MainMenuController()
+            self.present(mainMenu, animated: true, completion: nil)
+
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

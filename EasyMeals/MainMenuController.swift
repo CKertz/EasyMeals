@@ -175,6 +175,13 @@ class MainMenuController: UIViewController {
     }
     func handleContinue(){
         let tabViewController = TabMenuController()
+        Auth.auth().signInAnonymously(completion: { (user, error) in
+            if error != nil {
+                print (error ?? nil)
+                return
+            }
+         print ("User logged in with id " + user!.uid)
+        })
         //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
         self.present(tabViewController, animated: true, completion: nil)
        // self.navigationController?.pushViewController(tabViewController, animated: true)
