@@ -13,8 +13,13 @@ class ListController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
       //  self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+        navigationItem.title = "Lists"
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
+        //navigationItem.title = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
         self.navigationController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         if Auth.auth().currentUser?.uid == nil {
             handleLogout()

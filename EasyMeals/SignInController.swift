@@ -102,7 +102,7 @@ class SignInController: UIViewController{
         //dismiss(animated: true, completion: nil)
         //self.navigationController?.pushViewController(MainMenuController(), animated: true)
         self.navigationController?.popViewController(animated: true)
-
+        
         let loginController = MainMenuController()
        // present(loginController, animated: true, completion: nil)
     }
@@ -131,11 +131,7 @@ class SignInController: UIViewController{
         
         
         
-        /*whiteBgImgView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-         whiteBgImgView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-         whiteBgImgView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
-         whiteBgImgView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-         */
+
         registerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         //registerLabel.topAnchor.constraint(equalTo: whiteBgImgView.frame.origin.x, constant: -50).isActive = true
         registerLabel.topAnchor.constraint(equalTo: whiteBgImgView.topAnchor, constant: -200).isActive = true // static value of 200 needs adjusts for other devices

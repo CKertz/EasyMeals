@@ -176,7 +176,8 @@ class MainMenuController: UIViewController {
     func handleContinue(){
         let tabViewController = TabMenuController()
         //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
-        self.navigationController?.pushViewController(tabViewController, animated: true)
+        self.present(tabViewController, animated: true, completion: nil)
+       // self.navigationController?.pushViewController(tabViewController, animated: true)
 
         //let loginController = TabMenuController()
        // present(loginController, animated: true, completion: nil)
