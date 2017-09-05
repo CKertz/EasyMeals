@@ -109,7 +109,6 @@ class RegisterController: UIViewController{
         //dismiss(animated: true, completion: nil)
        // self.navigationController?.pushViewController(MainMenuController(), animated: true)
         self.navigationController?.popViewController(animated: true)
-        let loginController = MainMenuController()
         //present(loginController, animated: true, completion: nil)
     }
     func setUpRegLabel(){
@@ -183,16 +182,40 @@ class RegisterController: UIViewController{
         
         
     }
-
+    func verifyFieldsNotNil(){
+        let password: String = passTextField.text!
+        if (self.emailTextField.text == nil || self.passTextField.text == nil || self.emailTextField.text == "" || self.passTextField.text == ""){
+            let alert = UIAlertController(title: "Missing email/password", message: "Make sure that all fields are entered.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated:true, completion: nil)
+        }
+        if (password.characters.count < 6){
+            let alert = UIAlertController(title: "Password is too short", message: "Make sure that your password is at least 6 characters long.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated:true, completion: nil)
+        }
+        if !(emailTextField.text?.lowercased().characters.contains("@"))!{
+            let alert = UIAlertController(title: "Invalid email address", message: "Please enter a valid email address.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated:true, completion: nil)
+        }
+        return
+    }
     func handleRegister(){
+        verifyFieldsNotNil()
         guard let email = emailTextField.text, let password = passTextField.text else {
+
             return
         }
+
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passTextField.text!, completion: {(user, error) in
-            
+
             
             if error != nil {
                 print(error as Any)
+                let alert = UIAlertController(title: "Account already created", message: "An account with this email has already been created, please sign in instead of registering.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated:true, completion: nil)
                 return
             }
             guard let uid = user?.uid else{
@@ -204,7 +227,8 @@ class RegisterController: UIViewController{
             usersReference.updateChildValues(values, withCompletionBlock: {(err, ref) in
             
                 if err != nil {
-                    print(err)
+
+                    print(err ?? "")
                     return
                 }
                 let tabViewController = TabMenuController()

@@ -55,7 +55,7 @@ class SettingsController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         navigationItem.title = "Settings"
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
+        self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
         
         //navigationItem.title = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)

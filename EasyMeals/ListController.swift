@@ -17,7 +17,7 @@ class ListController: UICollectionViewController {
       //  self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
         navigationItem.title = "Lists"
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
+        self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
         //navigationItem.title = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
         self.navigationController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
@@ -33,13 +33,11 @@ class ListController: UICollectionViewController {
             print(logoutError)
         }
         let nav1 = UINavigationController()
-        let firstView = MainMenuController(nibName: nil, bundle: nil)
-        let secondView = RegisterController(nibName: nil, bundle: nil)
         let thirdView = TabMenuController()
         // nav1.viewControllers = [tabMenuController,secondView,firstView]
         nav1.viewControllers = [thirdView]
-        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: "Being a guest", message: "As a guest, you will not be able to share any grocery lists.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Thanks!", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated:true, completion: nil)
         //present(nav1, animated: true, completion: nil)
     }

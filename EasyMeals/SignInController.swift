@@ -176,10 +176,10 @@ class SignInController: UIViewController{
         let password = passTextField.text
         Auth.auth().signIn(withEmail: email!, password: password!) { (user, error) in
             if error != nil{
-                let alert = UIAlertController(title: "Invalid Username/Password", message: "Please verify the correct username/password combination, or register a new account.", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Invalid Email/Password", message: "Please verify the correct email/password combination, or register a new account.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated:true, completion: nil)
-                print(error ?? nil)
+                print(error ?? "")
                 return
             }
             let tabViewController = TabMenuController()
