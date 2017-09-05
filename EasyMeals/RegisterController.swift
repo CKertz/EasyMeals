@@ -88,21 +88,14 @@ class RegisterController: UIViewController{
         bgImg.contentMode = .scaleAspectFill
         //self.view.insertSubview(bgImg, at: 0)
         self.title = "Registration"
-        UINavigationBar.appearance().backgroundColor = UIColor.blue
-        self.navigationController?.navigationBar.backgroundColor = UIColor.brown // doesn't work
-        //self.navigationController?.navigationBar.topItem?.title = "Registration"
         navigationItem.title = "Registration"
-        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector (backToMainMenu))
         view.addSubview(inputContainerView)
         view.addSubview(registerBtn)
-        //view.addSubview(<#T##view: UIView##UIView#>)
         view.addSubview(registerLabel)
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))//Close view if tapped on screen
-        //view.addSubview(emailTextField)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
+        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
         self.navigationController?.navigationBar.isHidden = false// Isn't default because in MainMenuController we want it do be hidden
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-
         view.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
 
         //setUpRegistrationUI()

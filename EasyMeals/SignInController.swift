@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInController: UIViewController{
     
@@ -87,7 +88,8 @@ class SignInController: UIViewController{
         view.addSubview(signInBtn)
         view.addSubview(registerLabel)
         //view.addSubview(emailTextField)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
+        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToMainMenu))
+        
         self.navigationController?.navigationBar.isHidden = false
         //setUpRegistrationUI()
         view.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
@@ -99,12 +101,8 @@ class SignInController: UIViewController{
         
     }
     func backToMainMenu(){
-        //dismiss(animated: true, completion: nil)
-        //self.navigationController?.pushViewController(MainMenuController(), animated: true)
         self.navigationController?.popViewController(animated: true)
         
-        let loginController = MainMenuController()
-       // present(loginController, animated: true, completion: nil)
     }
     func setUpRegLabel(){
         registerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -174,14 +172,20 @@ class SignInController: UIViewController{
         
     }
     func handleSignIn(){
-        let tabViewController = TabMenuController()
-        //let tabViewController = TabMenuController()
-        
-        //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
-        
-        self.present(tabViewController, animated: true, completion: nil)
-        //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
-       // self.navigationController?.pushViewController(tabViewController, animated: true)
+        let email = emailTextField.text
+        let password = passTextField.text
+        Auth.auth().signIn(withEmail: email!, password: password!) { (user, error) in
+            if error != nil{
+                let alert = UIAlertController(title: "Invalid Username/Password", message: "Please verify the correct username/password combination, or register a new account.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated:true, completion: nil)
+                print(error ?? nil)
+                return
+            }
+            let tabViewController = TabMenuController()
+            self.present(tabViewController, animated: true, completion: nil)
+        }
+
     }
 }
 

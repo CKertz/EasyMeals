@@ -56,6 +56,7 @@ class SettingsController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.title = "Settings"
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
+        
         //navigationItem.title = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
         
@@ -77,7 +78,8 @@ class SettingsController: UIViewController, UITableViewDelegate, UITableViewData
             print("signing out")
             try! Auth.auth().signOut()
             let mainMenu = MainMenuController()
-            self.present(mainMenu, animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
+            //self.present(mainMenu, animated: true, completion: nil)
 
         }
     }

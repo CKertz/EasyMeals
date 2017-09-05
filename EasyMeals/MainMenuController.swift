@@ -86,14 +86,13 @@ class MainMenuController: UIViewController {
         view.backgroundColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
-
         let bgImg = UIImageView(frame: UIScreen.main.bounds)
         bgImg.image = UIImage(named: "blurGroceryStoreImg")
         bgImg.contentMode = .scaleAspectFill
         //self.view.insertSubview(bgImg, at: 0)
         //self.navigationController?.setNavigationBarHidden(true, animated: true) // WORKS
         navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.25, green: 0.79, blue: 0.64, alpha: 1)
-        //self.navigationController?.navigationBar.isHidden = true does NOT Work
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         view.addSubview(loginContainerView)
         view.addSubview(registerButton)
         view.addSubview(signInButton)
