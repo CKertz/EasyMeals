@@ -9,13 +9,14 @@
 import UIKit
 import Firebase
 
-class ListController: UICollectionViewController {
+let cellId = "cellId"
+
+class ListController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
-      //  self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
         navigationItem.title = "Lists"
+        collectionView?.alwaysBounceVertical = true
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
         //navigationItem.title = UIColor.white
@@ -25,7 +26,20 @@ class ListController: UICollectionViewController {
             handleLogout()
         }
         collectionView?.backgroundColor = UIColor.white
+        collectionView?.register(listCell.self, forCellWithReuseIdentifier: cellId)
     }
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
+    }
+    
     func handleLogout(){
         do{
             try Auth.auth().signOut()
@@ -43,4 +57,17 @@ class ListController: UICollectionViewController {
     }
     let listTab = UITabBarItem(title: "Lists", image: nil, selectedImage: nil)
     
+}
+class listCell: UICollectionViewCell{
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    func setupViews(){
+        backgroundColor = UIColor.red
+    }
 }

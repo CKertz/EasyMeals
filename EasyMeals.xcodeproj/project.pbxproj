@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		327D83458D3F88B0B12D0BC5 /* Pods_EasyMealsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AB7ACFC1C77B2F18CD38B9 /* Pods_EasyMealsTests.framework */; };
+		3F3933B11F5E5DF10002B3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3933AF1F5E5DF10002B3CF /* Main.storyboard */; };
 		3F4E16311F33E91B00CBB5C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E16301F33E91B00CBB5C6 /* GoogleService-Info.plist */; };
 		3F5212A61F2AB77000B94D22 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5212A51F2AB77000B94D22 /* RegisterController.swift */; };
 		3F5212A81F2AF36000B94D22 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5212A71F2AF36000B94D22 /* SignInController.swift */; };
@@ -17,9 +18,7 @@
 		3FF731361F1860990016F2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731351F1860990016F2A7 /* AppDelegate.swift */; };
 		3FF731381F1860990016F2A7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731371F1860990016F2A7 /* FirstViewController.swift */; };
 		3FF7313A1F1860990016F2A7 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731391F1860990016F2A7 /* MainMenuController.swift */; };
-		3FF7313D1F1860990016F2A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7313B1F1860990016F2A7 /* Main.storyboard */; };
 		3FF7313F1F18609A0016F2A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7313E1F18609A0016F2A7 /* Assets.xcassets */; };
-		3FF731421F18609A0016F2A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF731401F18609A0016F2A7 /* LaunchScreen.storyboard */; };
 		3FF7314D1F18609A0016F2A7 /* EasyMealsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7314C1F18609A0016F2A7 /* EasyMealsTests.swift */; };
 		3FF731581F18609A0016F2A7 /* EasyMealsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF731571F18609A0016F2A7 /* EasyMealsUITests.swift */; };
 		5C3EFA265B52453CA553CFEE /* Pods_EasyMealsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF925B844FBCC9F226DBD2 /* Pods_EasyMealsUITests.framework */; };
@@ -47,6 +46,7 @@
 		1151B67AFEEA2968F004251E /* Pods-EasyMeals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMeals.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMeals/Pods-EasyMeals.release.xcconfig"; sourceTree = "<group>"; };
 		157C427F3B6D1DF6D0B38B38 /* Pods-EasyMealsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMealsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMealsTests/Pods-EasyMealsTests.release.xcconfig"; sourceTree = "<group>"; };
 		35F8A88B59DCB87865F82988 /* Pods-EasyMealsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMealsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyMealsUITests/Pods-EasyMealsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F3933B01F5E5DF10002B3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F4E16301F33E91B00CBB5C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F5212A51F2AB77000B94D22 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		3F5212A71F2AF36000B94D22 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
@@ -57,9 +57,7 @@
 		3FF731351F1860990016F2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF731371F1860990016F2A7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3FF731391F1860990016F2A7 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
-		3FF7313C1F1860990016F2A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FF7313E1F18609A0016F2A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3FF731411F18609A0016F2A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FF731431F18609A0016F2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF731481F18609A0016F2A7 /* EasyMealsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyMealsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF7314C1F18609A0016F2A7 /* EasyMealsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyMealsTests.swift; sourceTree = "<group>"; };
@@ -146,10 +144,9 @@
 				3FB5A34B1F53B9D800CDBACD /* SettingsController.swift */,
 				3F5212A71F2AF36000B94D22 /* SignInController.swift */,
 				3FA3C19D1F3AB7AF00C060C0 /* TabMenuController.swift */,
-				3FF7313B1F1860990016F2A7 /* Main.storyboard */,
+				3F3933AF1F5E5DF10002B3CF /* Main.storyboard */,
 				3FF7313E1F18609A0016F2A7 /* Assets.xcassets */,
 				3FF731431F18609A0016F2A7 /* Info.plist */,
-				3FF731401F18609A0016F2A7 /* LaunchScreen.storyboard */,
 				3FF731371F1860990016F2A7 /* FirstViewController.swift */,
 			);
 			path = EasyMeals;
@@ -305,10 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FF731421F18609A0016F2A7 /* LaunchScreen.storyboard in Resources */,
+				3F3933B11F5E5DF10002B3CF /* Main.storyboard in Resources */,
 				3F4E16311F33E91B00CBB5C6 /* GoogleService-Info.plist in Resources */,
 				3FF7313F1F18609A0016F2A7 /* Assets.xcassets in Resources */,
-				3FF7313D1F1860990016F2A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,20 +526,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3FF7313B1F1860990016F2A7 /* Main.storyboard */ = {
+		3F3933AF1F5E5DF10002B3CF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3FF7313C1F1860990016F2A7 /* Base */,
+				3F3933B01F5E5DF10002B3CF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3FF731401F18609A0016F2A7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FF731411F18609A0016F2A7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
