@@ -209,8 +209,6 @@ class RegisterController: UIViewController{
                 }
                 let tabViewController = TabMenuController()
 
-                //let tabViewController = TabMenuController(collectionViewLayout: UICollectionViewFlowLayout())
-
                 self.present(tabViewController, animated: true, completion: nil)//
             })
             

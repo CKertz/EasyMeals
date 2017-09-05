@@ -77,10 +77,11 @@ class SettingsController: UIViewController, UITableViewDelegate, UITableViewData
         if (indexPath.row == 0){
             print("signing out")
             try! Auth.auth().signOut()
-            let mainMenu = MainMenuController()
-            self.dismiss(animated: true, completion: nil)
-            //self.present(mainMenu, animated: true, completion: nil)
-
+            let presentingViewController = self.presentingViewController
+            self.dismiss(animated: true, completion: {
+                presentingViewController!.dismiss(animated: true, completion: {})})
+            //self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
         }
     }
     
